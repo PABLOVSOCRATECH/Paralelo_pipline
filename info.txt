@@ -1,0 +1,71 @@
+Bienvenidos al curso de Cypress
+cls - limpiar texto
+1,-npm init
+
+2,-npm install cypress --save-dev ->> instalación
+
+
+3.- npx instalación http://www.npmjs.com/package/npx
+3.1 --> npx install -g npx
+3.1 -> npx cypress install --force -> forzar instalación
+
+
+
+4,node_modules\.bin\cypress open
+
+5,- npx cypress open
+6,-Parar consola --> ctrl +c 
+
+
+
+
+-----------------------------------------
+1.npm  init
+npm install cypress --save-dev --> instalacion
+-node_modules\.bin\cypress open
+npm cypress  install  force --> forzar la instalacion
+npm install npx -g
+npx cypress open
+node_modules\.bin\cypress run //sirve para lanzar los test desde la consola
+control+c //para parar la consola
+npx cypress run
+npx cypress run --headed // lanzar los test desde el navegador
+npx cypress run --browser chrome //lanzar los test desde navegador chrome/mozilla etc
+npx cypress run -spec "cypress\integration\integration\seccion_2\asserts.js" //para seleccionar la ruta de los test específicos que heremos probar. Copy relative path.
+npx cypress run --spec "cypress\integration\integration\seccion_2\*"  //sirve para ejecutar todos los test de una carpeta 
+
+control + } (comenta todas las lineas seleccionadas)
+Crear Snipepts, pulsar CONTROL + P - CONFIGURE SNIPPETS
+Para poner comillas automáticas: seleccionar linea y pulsar shift + "
+\t <-- poner tabulación en los snippets
+
+npx cypress run --spec "cypress\integration\seccion_6\pageObject_1.js // GRABAR-RECORD 
+npx cypress run --spec "cypress\integration\seccion_6\pageObject_1.js + FOTO V
+cy.screenshot("Campo nombre") <--- se utiliza en las líneas de código cuidado con los cy.wait(tiempo)
+MUCHOS SCREENSHOT HACE QUE SE PARALICE.
+
+https://www.mockaroo.com/ <--- crea valorea aleatorios *****
+https://beautifytools.com/ <------- conversor de  ARCHIVOS TIPO ILOVEPDF  EJ : DE Excel a JSON
+EDIT- REPLACE -> ELIGES QUE PALABRA REEMPLAZAR EN TODO EL CÓDIGO
+
+WEBS test
+https://demoqa.com
+https://demo.anhtester.com
+https://opensource-demo.orangehrmlive.com/
+https://testingqarvn.com.es/
+https://computer-database.gatling.io/computers 
+https://academybugs.com/ <---- hay ejemplos de Bugs y como reportarlos QA
+http://zero.webappsecurity.com/
+https://www.saucedemo.com/ 
+http://automationpractice.com/index.php
+
+
+"testFiles": "**/*.feature"  <--- si Elimino esto de la carpeta cypress.json aparecen todos los tests,es para que muestre los cucumber.
+"**/*.feature" ->> USAR EN LA CARPETA cypress.json Para que solo aparezca en la interfaz de Cypress los archivos .feature,quitar para ver todos.
+
+import { And, When } from "@badeball/cypress-cucumber-preprocessor"
+
+KEY INTEGRACION CONTINUA 
+npx cypress run --record --key cf8732a1-92d9-4810-91b9-270e81cdb676
+
+

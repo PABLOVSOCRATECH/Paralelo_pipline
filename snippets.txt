@@ -1,0 +1,193 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+"Plantilla":{
+	"prefix": "c_texto_enabled",
+	"body":[
+			
+		],
+	"description": "Cypress Texto"
+
+
+	},
+
+"texto_enabled":{
+	"prefix": "c_texto_enabled",
+	"body":[
+		"cy.get('$1').should('be.visible').should('be.enabled').clear().type('$2')",
+		"cy.wait(tiempo)"
+	],
+	"description": "Cypress Texto"
+		
+},
+
+"Click":{
+	"prefix": "c_Click",
+	"body":[
+		"cy.get('$1').should('be.visible').click()$2",
+		"cy.wait(tiempo)"
+	    ],
+	"description": "Cypress Click"
+
+
+},
+
+"Click_force":{
+	"prefix": "c_Click_force",
+	"body":[
+		"cy.get('$1').should('be.visible').click({force:true})$2",
+		"cy.wait(tiempo)"
+	    ],
+	"description": "Cypress Click_force"
+
+
+},
+
+"Verificar_texto":{
+	"prefix": "c_Verificar_texto",
+	"body":[
+		"cy.get('$1').should('be.visible').contains('$2'})",
+		"cy.wait(tiempo)",
+	    ],
+	"description": "Cypress Verificar_texto"
+
+
+},
+
+"Click_check_box":{
+	"prefix": "c_Checked_box",
+	"body":[
+		"cy.get('$1').check().should('be.checked').and('have.value','$2'",
+		"cy.wait(tiempo)"
+		//Valida el nombre del valor del checkbox
+	    ],
+	"description": "Cypress Checkbox valida nombre "
+
+},
+	"Click_check_box_dos":{
+		"prefix": "c_Checked_box_dos opciones",
+		"body":[
+			"cy.get('$1').check('$2','$3')",
+			"cy.wait(tiempo)"
+			//Poner el nombre de los dos values
+			],
+		"description": "Cypress Checkbox valida por los valores "
+},
+
+"Combo_value":{
+	"prefix": "c_combo_value",
+	"body":[
+		"cy.get('$1').select('$2').should('have.value','$3')",
+		"cy.wait(tiempo)"
+		//Poner el primero el nombre el segundo el value
+		],
+	"description": "Cypress Checkbox poner los dos valores "
+
+},
+
+"Texto_visible":{
+	"prefix": "c_texto_visible",
+	"body":[
+		"cy.get('$1').should('be visible').type('$2')",
+		"cy.wait(tiempo)"
+		//
+		],
+	"description": "Texto visible "
+
+},
+
+"Tiempo":{
+	"prefix": "c_tiempo)",
+	"body":[
+			
+		"cy.wait(tiempo)"
+			
+		],
+	"description": "Poner tiempo "
+},
+
+
+"Texto_visible_xpath":{
+	"prefix": "c_texto_visible_xpath",
+	"body":[
+		"cy.xpath('$1).should('be.visible').type('$2')",		
+		"cy.wait(tiempo)"
+		//Texto visible	
+		],
+	"description": "Poner tiempo "
+},
+
+	"Click_force_xpath":{
+		"prefix": "c_force_xpath",
+	"body":[
+			"cy.xpath('$1).should('be.visible').click({force:true}'$2')",		
+			"cy.wait(tiempo)"
+			//Texto visible	
+			],
+	"description": "Cypress Click force xpath "
+},
+
+"Texto_argumentos":{
+	"prefix": "c_texto_argumentos",
+"body":[
+		"cy.get('[${1:argumento}]').should('be.visible').type('[${2:texto}]')",	
+		"cy.wait(tiempo)"
+		//Texto argumentos
+		],
+"description": "Texto por argumentos"
+},
+
+"Plantilla_cypress":{
+	"prefix": "c_plantilla_cypress",
+"body":[
+	"///<reference types='Cypress' />",
+//para que funcionen los comandos,
+
+"import 'cypress-file-upload';",
+"import 'cypress-xpath'",
+"import 'cypress-plugin-tab'",
+"require('@4tw/cypress-drag-drop')",
+"require('cypress-xpath')",
+"require( 'cypress-plugin-tab')",
+
+//para que funcionen los comandos
+"Cypress.on('uncaught:exception', (err, runnable) => {",
+"    return false",
+"})",
+"",
+"",
+
+
+"describe('${1:description}', () =>{",
+
+    "\t\tit('${2:test}', () =>{",
+    	"\t\t\tlet tiempo=2000",
+      	"\t\t\tcy.visit('${3:url}')",
+       	"\t\t\tcy.title().should('eq','${4:título}')",
+        "\t\t\tcy.wait(tiempo)",
+    "\t\t})",
+
+  
+    "})",
+
+	//Cierre de describe"
+		
+],
+"description": "Plantilla Cypress"
+
+}
+}
+
+
