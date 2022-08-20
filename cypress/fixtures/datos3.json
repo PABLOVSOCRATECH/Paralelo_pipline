@@ -1,7 +1,0 @@
-[
-    { "nombre": "Pablo","email": "hello1@cypress.io","dir1": "Dirección 1_1","dir2": "Dirección 2_1"},
-    { "nombre": "Pablo1","email": "hello2@cypress.io","dir1": "Dirección 1_2","dir2": "Dirección 2_2"},
-    { "nombre": "Pablo2","email": "hello3@cypress.io","dir1": "Dirección 1_3","dir2": "Dirección 2_3"},
-    { "nombre": "Pablo3","email": "hello4@cypress.io","dir1": "Dirección 1_4","dir2": "Dirección 2_4"},
-    { "nombre": "Pablo4","email": "hello5@cypress.io","dir1": "Dirección 1_5","dir2": "Dirección 2_5"}
-]
