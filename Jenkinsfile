@@ -1,7 +1,7 @@
 pipeline { //SI ES UN TEST MUY GRANDE NO MÁS DE 3 COMPUTADORAS/SLAVES,+ 2MIN MUCHO TIME, NO AGUANTA EL PROCESO.pUEDE USARSE CICRCLE (FRAMEWORK).
     agent any
 
-    tools {nodejs "node"}
+    tools {nodejs "Node"}
 
     stages {
 
